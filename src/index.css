@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050a0e;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a1628;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #00f5ff44;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00f5ff88;
+  }
+
+  ::selection {
+    background-color: #00f5ff33;
+    color: #00f5ff;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(10, 22, 40, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+  }
+
+  .glass-card {
+    background: rgba(13, 31, 60, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 245, 255, 0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #00f5ff, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold text-sm tracking-wide transition-all duration-300;
+    background: linear-gradient(135deg, #00f5ff22, #7c3aed22);
+    border: 1px solid #00f5ff55;
+    color: #00f5ff;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #00f5ff33, #7c3aed33);
+    border-color: #00f5ff;
+    box-shadow: 0 0 20px #00f5ff33, 0 0 40px #00f5ff11;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-semibold text-sm tracking-wide transition-all duration-300;
+    background: transparent;
+    border: 1px solid #7c3aed55;
+    color: #a78bfa;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #7c3aed;
+    box-shadow: 0 0 20px #7c3aed33;
+    transform: translateY(-2px);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-2;
+  }
+
+  .neon-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f5ff, #7c3aed, transparent);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+}
